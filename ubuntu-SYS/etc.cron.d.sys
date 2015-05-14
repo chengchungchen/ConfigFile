@@ -1,0 +1,2 @@
+0 1 * * * /usr/sbin/ntpdate -s ntp1.yam.com > /dev/null 2>&1
+*/10 * * * * /root/scripts/SQC/monitor_HD.sh > /dev/null 2>&1

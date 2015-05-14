@@ -1,0 +1,6 @@
+[mysqld]
+server-id               = 008210
+log_bin                 = /home/mysql/xtv-wd210-mysql-bin
+expire_logs_days        = 10
+max_binlog_size         = 100M
+log-slave-updates

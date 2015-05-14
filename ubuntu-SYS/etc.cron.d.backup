@@ -1,0 +1,3 @@
+0 5 * * * root /bin/bash /root/BackupScript/BackupDB.sh > /dev/null 2>&1
+0 1 * * * root /bin/bash /root/BackupScript/BackupSYS.sh > /dev/null 2>&1
+30 1 * * * root /bin/bash /root/BackupScript/BackupWEB.sh > /dev/null 2>&1

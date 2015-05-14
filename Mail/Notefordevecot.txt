@@ -1,0 +1,2 @@
+If you want use dovecot, most to change permission.
+chmod 600 /var/mail/*

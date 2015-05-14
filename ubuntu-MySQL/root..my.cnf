@@ -1,0 +1,10 @@
+[client]
+user=backup
+password=backupuser
+
+user=root
+password=dbpasswd
+
+# The privileges for backup
+# GRANT SELECT, LOCK TABLES, SHOW VIEW, TRIGGER ON *.* TO 'backup'@'localhost' IDENTIFIED BY PASSWORD '*CB08770F5F4FF6D1A05CBBE9847BB532137E4C96'
+# 
