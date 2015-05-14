@@ -3,7 +3,7 @@
 
 DATE=$(date +%Y%m%d-%H%M%S)
 BACKUP_PATH='/home/log/backup/DB'
-BACKUP_FILE=$BACKUP_PATH/xtv-wd210_DB$DATE.sql.bz2
+BACKUP_FILE=$BACKUP_PATH/ccchen_DB$DATE.sql.bz2
 
 if [ ! -d $BACKUP_PATH ]; then
 	mkdir -p $BACKUP_PATH
@@ -11,7 +11,7 @@ fi
 
 starttime=$(date +%H%M%S)
 echo $starttime
-/usr/bin/mysqldump --default-character-set=utf8 --set-gtid-purged=OFF --opt --quick --all-databases | /bin/bzip2 > $BACKUP_FILE 
+/usr/bin/mysqldump --default-character-set=utf8 --set-gtid-purged=OFF --opt --quick --all-databases --triggers --routines --events | /bin/bzip2 > $BACKUP_FILE 
 endtime=$(date +H%M%S)
 echo $endtime
 

@@ -2,11 +2,11 @@
 # This script is to backup the system configure from
 # /root/BackupScript/SYSList.txt
 
-FILE='/etc/nginx/fastcgi_params /etc/nginx/nginx.conf /etc/nginx/sites-available /etc/php5/fpm/php-fpm.conf /etc/php5/fpm/php.ini /etc/php5/fpm/pool.d/www.conf /usr/share/php/YAM /etc/mysql/my.cnf /etc/mysql/conf.d/yam.cnf /etc/logrotate.d/mysql-server /etc/logrotate.d/nginx /etc/logrotate.d/php5-fpm /etc/pure-ftpd/pureftpd.passwd /etc/pure-ftpd/conf/PassivePortRange /etc/pure-ftpd/conf/NoAnonymous /etc/cron.d/backup /etc/cron.d/xtv /etc/cron.d/sys /root/BackupScript /etc/sysctl.conf'
+FILE='/etc/nginx/fastcgi_params /etc/nginx/nginx.conf /etc/nginx/sites-available /etc/php5/fpm/php-fpm.conf /etc/php5/fpm/php.ini /etc/php5/fpm/pool.d/www.conf /usr/share/php /etc/mysql/my.cnf /etc/mysql/conf.d/yam.cnf /etc/logrotate.d/mysql-server /etc/logrotate.d/nginx /etc/logrotate.d/php5-fpm /etc/pure-ftpd/pureftpd.passwd /etc/pure-ftpd/conf/PassivePortRange /etc/pure-ftpd/conf/NoAnonymous /etc/cron.d /root/BackupScript /etc/sysctl.conf'
 
 DATE=$(date +%Y%m%d-%H%M%S)
 BACKUP_PATH='/home/log/backup/SYS'
-BACKUP_FILE=$BACKUP_PATH/xtv-wd210_SYS$DATE.tgz
+BACKUP_FILE=$BACKUP_PATH/ccchen_SYS$DATE.tgz
 
 if [ ! -d $BACKUP_PATH ]; then
 	mkdir -p $BACKUP_PATH

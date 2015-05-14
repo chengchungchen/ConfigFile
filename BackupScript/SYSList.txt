@@ -4,9 +4,8 @@
 /etc/php5/fpm/php-fpm.conf
 /etc/php5/fpm/php.ini
 /etc/php5/fpm/pool.d/www.conf
-/usr/share/php/YAM
-/etc/mysql/my.cnf
-/etc/mysql/conf.d/yam.cnf
+/usr/share/php
+/etc/mysql
 /etc/logrotate.d/mysql-server
 /etc/logrotate.d/nginx
 /etc/logrotate.d/php5-fpm
@@ -14,6 +13,4 @@
 /etc/pure-ftpd/conf/PassivePortRange
 /etc/pure-ftpd/conf/NoAnonymous
 /root/BackupScript
-/etc/cron.d/backup
-/etc/cron.d/xtv
-/etc/cron.d/sys
+/etc/cron.d
