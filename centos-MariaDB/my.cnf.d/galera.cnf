@@ -19,7 +19,7 @@ wsrep_cluster_address="gcomm://"
 innodb_autoinc_lock_mode=2
 
 # Node #1 address
-wsrep_node_address=10.1.79.11
+wsrep_node_address=192.168.1.1
 
 # SST method
 # For perocna centos
@@ -28,7 +28,7 @@ wsrep_node_address=10.1.79.11
 wsrep_sst_method=rsync
 
 # Cluster name
-wsrep_cluster_name=blog-d1st
+wsrep_cluster_name=dbcluster
 
 # Authentication for SST method
 wsrep_sst_auth="sstuser:s3cret"

@@ -74,7 +74,7 @@ mail_owner = postfix
 #
 #myhostname = host.domain.tld
 #myhostname = virtual.domain.tld
-myhostname = public.yam.com
+myhostname = postfix.ccchen.com
 
 # The mydomain parameter specifies the local internet domain name.
 # The default is to use $myhostname minus the first component.
@@ -82,7 +82,7 @@ myhostname = public.yam.com
 # parameters.
 #
 #mydomain = domain.tld
-mydomain = yam.com
+mydomain = ccchen.com
 
 # SENDING MAIL
 # 
@@ -268,10 +268,7 @@ mynetworks_style = host
 #mynetworks = 168.100.189.0/28, 127.0.0.0/8
 #mynetworks = $config_directory/mynetworks
 #mynetworks = hash:/etc/postfix/network_table
-#mynetworks = 127.0.0.0/8, 10.2.0.0/16, 113.196.240.0/24, 113.196.241.0/24, 113.196.242.0/24
-mynetworks = 127.0.0.0/8, 113.196.242.54, 60.248.107.77
-
-# 60.247.107.77 is the IP of edm@vscinemas.com.tw ro iptv_event
+mynetworks = 127.0.0.0/8
 
 # The relay_domains parameter restricts what destinations this system will
 # relay mail to.  See the smtpd_recipient_restrictions description in

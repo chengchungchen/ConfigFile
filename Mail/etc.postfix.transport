@@ -292,5 +292,5 @@
 # 
 #                                                                   TRANSPORT(5)
 #
-public.yam.com    local:
-*                 smtp:[ip1.yam.com]
+postfix.ccchen.com    local:
+*                 smtp:[relay.ccchen.com]

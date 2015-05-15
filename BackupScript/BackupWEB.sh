@@ -6,7 +6,7 @@ WEB_DIR='/home/www/web.ccchen.com'
 
 DATE=$(date +%Y%m%d-%H%M%S)
 BACKUP_PATH='/home/log/backup/WEB'
-BACKUP_FILE=$BACKUP_PATH/web_WEB$DATE.tgz
+BACKUP_FILE=$BACKUP_PATH/ccchen_WEB$DATE.tgz
 
 if [ ! -d $BACKUP_PATH ]; then
 	mkdir -p $BACKUP_PATH

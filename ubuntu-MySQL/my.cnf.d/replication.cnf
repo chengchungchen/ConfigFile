@@ -1,6 +1,6 @@
 [mysqld]
-server-id               = 198021
-log_bin                 = /home/mysql/ads-vwd21-mysql-bin
+server-id               = 000001
+log_bin                 = /home/mysql/ccchen-mysql-bin
 expire_logs_days        = 7
 max_binlog_size         = 100M
 log-slave-updates
