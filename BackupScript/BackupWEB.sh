@@ -2,7 +2,7 @@
 # This script is to backup the web data
 # /root/BackupScript/WEBList.txt
 
-WEB_DIR='/home/www/web.ccchen.com'
+WEB_DIR='/home/www/ccchen.com'
 
 DATE=$(date +%Y%m%d-%H%M%S)
 BACKUP_PATH='/home/log/backup/WEB'
