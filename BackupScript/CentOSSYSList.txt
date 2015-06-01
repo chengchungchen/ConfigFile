@@ -1,0 +1,14 @@
+/etc/nginx/fastcgi_params
+/etc/nginx/nginx.conf
+/etc/nginx/sites-available
+/opt/rh/php54/root/etc/fpm/php-fpm.conf
+/opt/rh/php54/root/etc/fpm/php.ini
+/opt/rh/php54/root/etc/fpm/php-fpm.d/www.conf
+/etc/my.cnf
+/etc/my.cnf.d
+/etc/logrotate.d/mysql-server
+/etc/logrotate.d/nginx
+/etc/logrotate.d/php5-php-fpm
+/etc/pure-ftpd
+/root/BackupScript
+/etc/cron.d
