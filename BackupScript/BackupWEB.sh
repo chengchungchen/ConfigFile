@@ -2,23 +2,6 @@
 # This script is to backup the web data
 # /root/BackupScript/WEBList.txt
 
-#WEB_DIR='/home/www/ccchen.com'
-WEB_DIR=""
-while read line
-do
-    WEB_DIR="$WEB_DIR $line"
-done < WEBList.txt
-
-DATE=$(date +%Y%m%d-%H%M%S)
-BACKUP_PATH='/home/log/backup/WEB'
-BACKUP_FILE=$BACKUP_PATH/ccchen_WEB$DATE.tgz
-
-if [ ! -d $BACKUP_PATH ]; then
-    mkdir -p $BACKUP_PATH
-fi
-
-/bin/tar zcvf $BACKUP_FILE $WEB_DIR > /dev/null 2>&1
-
 function rm_oldfile() {
     file=$1
     n=$2
@@ -29,4 +12,24 @@ function rm_oldfile() {
     ls -1 $file* | head -n $n3 | xargs -n 1 rm -f
 }
 
-rm_oldfile $BACKUP_PATH/ 7
+DATE=$(date +%Y%m%d-%H%M%S)
+
+#WEB_DIR='/home/www/ccchen.com'
+#WEB_DIR=""
+while read line
+do
+    WEB_DIR="$line"
+    WEB_PATH="/home/www"
+    DATE=$(date +%Y%m%d-%H%M%S)
+    BACKUP_PATH="/home/log/backup/WEB/$WEB_DIR"
+    BACKUP_FILE="$BACKUP_PATH/ccchen_$WEB_DIR$DATE.tgz"
+
+    if [ ! -d $BACKUP_PATH ]; then
+        mkdir -p $BACKUP_PATH
+    fi
+
+    /bin/tar zcvf $BACKUP_FILE $WEB_PATH/$WEB_DIR > /dev/null 2>&1
+
+    rm_oldfile $BACKUP_PATH/ 7
+
+done < WEBList.txt
