@@ -19,9 +19,9 @@ DATE=$(date +%Y%m%d-%H%M%S)
 while read line
 do
     WEB_DIR="$line"
-    WEB_PATH="/home/www"
+    WEB_PATH="/srv/www"
     DATE=$(date +%Y%m%d-%H%M%S)
-    BACKUP_PATH="/home/log/backup/WEB/$WEB_DIR"
+    BACKUP_PATH="/backup/WEB/$WEB_DIR"
     BACKUP_FILE="$BACKUP_PATH/ccchen_$WEB_DIR$DATE.tgz"
 
     if [ ! -d $BACKUP_PATH ]; then

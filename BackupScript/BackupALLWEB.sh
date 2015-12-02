@@ -7,7 +7,7 @@ WEB_DIR=""
 while read line
 do
     WEB_DIR="$WEB_DIR $line"
-done < WEBList.txt
+done < /root/BackupScript/WEBList.txt
 
 DATE=$(date +%Y%m%d-%H%M%S)
 BACKUP_PATH='/home/log/backup/WEB'

@@ -11,7 +11,7 @@ do
 done < CentOSSYSList.txt
 
 DATE=$(date +%Y%m%d-%H%M%S)
-BACKUP_PATH='/home/log/backup/SYS'
+BACKUP_PATH='/backup/SYS'
 BACKUP_FILE=$BACKUP_PATH/ccchen_SYS$DATE.tgz
 
 if [ ! -d $BACKUP_PATH ]; then
