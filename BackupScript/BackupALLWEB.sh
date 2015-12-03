@@ -10,7 +10,7 @@ do
 done < /root/BackupScript/WEBList.txt
 
 DATE=$(date +%Y%m%d-%H%M%S)
-BACKUP_PATH='/home/log/backup/WEB'
+BACKUP_PATH='/backup/WEB'
 BACKUP_FILE=$BACKUP_PATH/ccchen_WEB$DATE.tgz
 
 if [ ! -d $BACKUP_PATH ]; then

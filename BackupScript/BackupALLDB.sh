@@ -2,7 +2,7 @@
 # This script is to backup ALL MySQL(-like) file
 
 DATE=$(date +%Y%m%d-%H%M%S)
-BACKUP_PATH="/home/log/backup/DB"
+BACKUP_PATH="/backup/DB"
 BACKUP_FILE="$BACKUP_PATH/ccchen_DB$DATE.sql.bz2"
 
 if [ ! -d $BACKUP_PATH ]; then

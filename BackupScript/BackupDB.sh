@@ -17,7 +17,7 @@ DATE=$(date +%Y%m%d-%H%M%S)
 while read line
 do
     DBNAME="$line"
-    BACKUP_PATH="/home/log/backup/DB/$DBNAME"
+    BACKUP_PATH="/backup/DB/$DBNAME"
     BACKUP_FILE="$BACKUP_PATH/ccchen_$DBNAME$DATE.sql.bz2"
 
     if [ ! -d $BACKUP_PATH ]; then
@@ -30,10 +30,10 @@ do
 done < DBList.txt
 
 # Backup DB user privileges
-if [ ! -d /home/log/backup/DB/user ]; then
-    mkdir -p /home/log/backup/DB/user
+if [ ! -d /backup/DB/user ]; then
+    mkdir -p /backup/DB/user
 fi
 
-/usr/bin/mysqldump --default-character-set=utf8 mysql columns_priv db procs_priv tables_priv user | /usr/bin/bzip2 > /home/log/backup/DB/user/ccchen_dbuser$DATE.sql.bz2
+/usr/bin/mysqldump --default-character-set=utf8 mysql columns_priv db procs_priv tables_priv user | /usr/bin/bzip2 > /backup/DB/user/ccchen_dbuser$DATE.sql.bz2
 
 rm_oldfile $BACKUP_PATH/ 5
