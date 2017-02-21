@@ -1,3 +1,0 @@
-/root/scripts
-/usr/local/etc/rsync/rsyncd.conf
-/var/cron/tabs
